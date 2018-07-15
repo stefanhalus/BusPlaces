@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ro.stefanhalus.java.views.FeaturesController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <ImageView fitHeight="40.0" fitWidth="60.0" layoutX="7.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" styleClass="welcomeIcon">
+            <image>
+                <Image url="@../images/bus_features_sun_stilish.png"/>
+            </image>
+        </ImageView>
+        <Label layoutX="70.0" layoutY="5.0" prefHeight="30.0" prefWidth="530.0" text="Facilități">
+            <font>
+                <Font size="20.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

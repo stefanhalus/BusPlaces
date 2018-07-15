@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="937.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.stefanhalus.java.views.ReservationsController">
+    <children>
+        <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+            <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="39.0" minWidth="50.0" prefHeight="44.0" prefWidth="590.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                <children>
+                    <ImageView fitHeight="40.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" styleClass="welcomeIcon" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <image>
+                            <Image url="@../images/icon_bus_chair.png" />
+                        </image>
+                    </ImageView>
+                    <Label prefHeight="30.0" prefWidth="530.0" text="Rezervări" AnchorPane.leftAnchor="50.0">
+                        <font>
+                            <Font size="20.0" />
+                        </font>
+                    </Label>
+                </children>
+            </HBox>
+            <TabPane layoutX="27.0" layoutY="123.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="300.0" minWidth="200.0" prefHeight="336.0" prefWidth="590.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="55.0">
+                <tabs>
+                    <Tab text="Căutare">
+                        <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                <children>
+                           <HBox alignment="TOP_CENTER" maxHeight="50.0" maxWidth="1.7976931348623157E308" minHeight="50.0" minWidth="250.0" prefHeight="50.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="5.0">
+                              <children>
+                                 <ComboBox fx:id="cbRouteSelect" prefHeight="25.0" prefWidth="450.0" promptText="Alegeți ruta" />
+                                 <DatePicker fx:id="dpDateSelect" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="90.0" prefHeight="45.0" prefWidth="150.0" />
+                                 <Button fx:id="btnSelect" mnemonicParsing="false" onAction="#btnActSelect" text="Caută" />
+                              </children>
+                           </HBox>
+                                    <TableView fx:id="searchTable" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="200.0" minWidth="400.0" onKeyPressed="#searchActEnter" onMouseClicked="#searchActClickDouble" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+                                        <columns>
+                                            <TableColumn fx:id="searchColRoute" prefWidth="245.33332300186157" text="Nume rută" />
+                                            <TableColumn fx:id="searchColClient" minWidth="0.0" prefWidth="67.33338928222656" text="Client" />
+                                            <TableColumn fx:id="searchColDeparture" prefWidth="206.00003051757812" text="Plecare" />
+                                            <TableColumn fx:id="searchColArrival" prefWidth="232.0" text="Sosire" />
+                                            <TableColumn fx:id="searchColDate" prefWidth="100.6666259765625" text="Data" />
+                                            <TableColumn fx:id="searchColPlaces" prefWidth="79.333251953125" text="Plaees" />
+                                        </columns>
+                                    </TableView>
+                                </children>
+                            </AnchorPane>
+                        </content>
+                    </Tab>
+                    <Tab text="Rezervări active">
+                        <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                <children>
+                                    <TableView fx:id="rezervariTable" layoutY="14.0" onKeyPressed="#rezervariActEnter" onMouseClicked="#rezervariActClickDouble" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                        <columns>
+                                            <TableColumn fx:id="rezervariColRuta" prefWidth="347.3333840370178" text="Nume rută" />
+                                            <TableColumn fx:id="rezervariColClient" minWidth="0.0" prefWidth="51.333251953125" text="Client" />
+                                            <TableColumn fx:id="rezervariColPlecare" prefWidth="135.33340454101562" text="Plecare" />
+                                            <TableColumn fx:id="rezervariColSosire" prefWidth="129.9998779296875" text="Sosire" />
+                                            <TableColumn fx:id="rezervariColData" prefWidth="149.333251953125" text="Data" />
+                                            <TableColumn fx:id="rezervariColPlaces" prefWidth="114.6666259765625" text="Locuri" />
+                                        </columns>
+                                    </TableView>
+                                </children>
+                            </AnchorPane>
+                        </content>
+                    </Tab>
+                    <Tab text="Istoric rezervări">
+                        <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                <children>
+                                    <TableView fx:id="istoricTable" onKeyPressed="#istoricActEnter" onMouseClicked="#istoricActClickDouble" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                        <columns>
+                                            <TableColumn fx:id="istoricColRuta" prefWidth="99.33334636688232" text="Nume rută" />
+                                            <TableColumn fx:id="istoricColClient" minWidth="0.0" prefWidth="107.33333587646484" text="Nume client" />
+                                            <TableColumn fx:id="istoricColPlecare" prefWidth="85.33335876464844" text="Plecare" />
+                                            <TableColumn fx:id="istoricColSosire" prefWidth="97.33331298828125" text="Sosire" />
+                                            <TableColumn fx:id="istoricColData" prefWidth="72.0" text="Data" />
+                                 <TableColumn fx:id="istoricColLocuri" prefWidth="72.0" text="Locuri" />
+                                        </columns>
+                                    </TableView>
+                                </children>
+                            </AnchorPane>
+                        </content>
+                    </Tab>
+                </tabs>
+            </TabPane>
+         <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#btnActAdd" text="Adaugă rezervare nouă">
+            <graphic>
+               <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../images/icon_add.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+            <font>
+               <Font size="14.0" />
+            </font>
+            <VBox.margin>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </VBox.margin>
+         </Button>
+        </VBox>
+    </children>
+</AnchorPane>

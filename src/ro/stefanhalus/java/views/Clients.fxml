@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="463.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.stefanhalus.java.views.ClientsController">
+    <children>
+
+        <ImageView fitHeight="40.0" fitWidth="60.0" layoutX="7.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" styleClass="welcomeIcon">
+            <image>
+                <Image url="@../images/icon_client.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="70.0" layoutY="5.0" prefHeight="30.0" prefWidth="530.0" text="Lista clienților">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+      <HBox alignment="CENTER" layoutX="58.0" layoutY="200.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="45.0">
+         <children>
+            <TableView fx:id="clientTbl" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onKeyPressed="#clientTblActEnter" onMouseClicked="#clientTblActClick" prefWidth="600.0">
+              <columns>
+                <TableColumn fx:id="clientTblColLastName" prefWidth="120.88887536525726" text="Nume" />
+                <TableColumn fx:id="clientTblColFirstName" prefWidth="121.77779388427734" text="Prenume" />
+                  <TableColumn fx:id="clientTblColPhone" prefWidth="140.66659545898438" text="Telefon" />
+              </columns>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </TableView>
+            <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="379.0" prefWidth="233.0">
+               <children>
+                  <HBox alignment="TOP_CENTER" prefHeight="35.0" prefWidth="182.0">
+                     <children>
+                        <Button fx:id="clientBtnEdit" mnemonicParsing="false" onAction="#clientBtnActEdit" text="Modifică" visible="false">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icon_edit.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="clientBtnDel" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#clientBtnActDel" text="Șterge" visible="false">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icon_del.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Label fx:id="clientLblFirstName" text="Nume de familie" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="clientTfLastName" editable="false" maxWidth="1.7976931348623157E308" minHeight="18.0" prefHeight="25.0" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets left="2.0" right="2.0" />
+                     </padding>
+                  </TextField>
+                  <Label fx:id="clientLblLastName" layoutX="54.0" layoutY="45.0" text="Nume de botez (prenume)" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="clientTfFirstName" editable="false" layoutX="10.0" layoutY="81.0" maxWidth="1.7976931348623157E308" minHeight="18.0" prefHeight="25.0" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets left="2.0" right="2.0" />
+                     </padding>
+                  </TextField>
+                  <Label fx:id="clientLblPhone" layoutX="21.0" layoutY="107.0" text="Telefon" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="clientTfPhone" editable="false" layoutX="10.0" layoutY="143.0" maxWidth="1.7976931348623157E308" minHeight="18.0" prefHeight="25.0" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets left="2.0" right="2.0" />
+                     </padding>
+                  </TextField>
+                  <Label fx:id="clientLblEmail" layoutX="21.0" layoutY="168.0" text="Email" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="clientTfEmail" editable="false" layoutX="10.0" layoutY="204.0" maxWidth="1.7976931348623157E308" minHeight="18.0" prefHeight="25.0" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets left="2.0" right="2.0" />
+                     </padding>
+                  </TextField>
+                  <Label fx:id="clientLblUser" layoutX="21.0" layoutY="229.0" text="Nume de utilizator" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="clientTfUser" editable="false" layoutX="10.0" layoutY="265.0" maxWidth="1.7976931348623157E308" minHeight="18.0" prefHeight="25.0" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets left="2.0" right="2.0" />
+                     </padding>
+                  </TextField>
+                  <Button fx:id="clientBtnSave" mnemonicParsing="false" onAction="#clientBtnActSave" text="Salvează" visible="false">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icon_save.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="clientBtnReset" layoutX="68.0" layoutY="329.0" mnemonicParsing="false" onAction="#clientBtnActReset" text="Resetați parola" visible="false">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icon_password.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="7.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="clientBtnAdd" mnemonicParsing="false" onAction="#clientBtnActAdd" text="Adaug[ client">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icon_add.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>

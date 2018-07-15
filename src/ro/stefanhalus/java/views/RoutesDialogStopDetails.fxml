@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="335.0" prefWidth="518.0" xmlns="http://javafx.com/javafx/9.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ro.stefanhalus.java.views.RoutesDialogStopDetailsController">
+    <children>
+        <TextField fx:id="tfCityDistrict" editable="false" layoutX="212.0" layoutY="20.0" prefHeight="31.0"
+                   prefWidth="231.0" promptText="Județ">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="tfStation" editable="false" layoutX="212.0" layoutY="60.0" prefHeight="31.0" prefWidth="231.0"
+                   promptText="Stație">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </TextField>
+        <Spinner fx:id="tfOrder" editable="true" layoutX="212.0" layoutY="100.0"/>
+        <TextField fx:id="tfArrival" layoutX="212.0" layoutY="150.0" prefHeight="31.0" prefWidth="231.0"
+                   promptText="Sosire">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="tfDeparture" layoutX="212.0" layoutY="190.0" prefHeight="31.0" prefWidth="231.0"
+                   promptText="Plecare">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="tfDistance" layoutX="212.0" layoutY="230.0" prefHeight="31.0" prefWidth="231.0"
+                   promptText="Distanță">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </TextField>
+        <Button fx:id="btnSave" layoutX="212.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnActSave"
+                text="Salvează" AnchorPane.bottomAnchor="9.666666666666686">
+            <font>
+                <Font size="15.0"/>
+            </font>
+            <graphic>
+                <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/icon_save.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="btnClose" layoutX="260.0" layoutY="348.0" mnemonicParsing="false" onAction="#btnActClose"
+                text="Închide" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+            <font>
+                <Font size="15.0"/>
+            </font>
+            <graphic>
+                <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/icon_turn_off.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Label layoutX="20.0" layoutY="25.0" text="Localitate, Județ" AnchorPane.leftAnchor="15.0">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Label>
+        <Label layoutX="20.0" layoutY="65.0" text="Nume stație" AnchorPane.leftAnchor="19.0">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Label>
+        <Label layoutX="20.0" layoutY="110.0" text="Nr. ordine oprire" AnchorPane.leftAnchor="15.0">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Label>
+        <Label layoutX="20.0" layoutY="155.0" text="Ora sosirii" AnchorPane.leftAnchor="19.0">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Label>
+        <Label layoutX="20.0" layoutY="195.0" text="Ora plecării" AnchorPane.leftAnchor="16.0">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Label>
+        <Label layoutX="20.0" layoutY="235.0" text="Km de la pornire până aici" AnchorPane.leftAnchor="16.0">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

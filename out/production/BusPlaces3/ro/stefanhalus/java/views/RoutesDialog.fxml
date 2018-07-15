@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="212.0" prefWidth="613.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.stefanhalus.java.views.RoutesDialogController">
+   <children>
+      <Label layoutX="53.0" layoutY="41.0" text="Numele rutei">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfRouteName" layoutX="150.0" layoutY="39.0" prefHeight="25.0" prefWidth="434.0" promptText="Alfa - Zeta (21:09)" />
+      <Button fx:id="btnSave" layoutX="153.0" layoutY="103.0" mnemonicParsing="false" onAction="#saveRoute" text="Salvează" AnchorPane.bottomAnchor="15.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icon_save.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnClose" layoutX="361.0" layoutY="57.0" mnemonicParsing="false" onAction="#closeWindow" text="Închide" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icon_turn_off.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnDelete" layoutX="276.0" layoutY="103.0" mnemonicParsing="false" onAction="#deleteRoute" text="Șterge" AnchorPane.bottomAnchor="15.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icon_del.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="53.0" layoutY="84.0" text="Autocar">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbBusSelected" layoutX="153.0" layoutY="82.0" prefHeight="25.0" prefWidth="430.0" promptText="Alegeți autocarul (opțional)" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="314.0" prefWidth="582.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.stefanhalus.java.views.LoginController">
+   <children>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="23.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="25.0">
+         <image>
+            <Image url="@../images/icon_employee.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="23.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="85.0">
+         <image>
+            <Image url="@../images/icon_password.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="tfUser" alignment="CENTER" layoutX="76.0" layoutY="25.0" prefHeight="40.0" prefWidth="410.0" promptText="nume de utilizator" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="25.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="tfPass" alignment="CENTER" layoutX="76.0" layoutY="86.0" prefHeight="40.0" prefWidth="410.0" promptText="parolă" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="85.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </PasswordField>
+      <Button fx:id="btnAuth" layoutX="75.0" layoutY="180.0" mnemonicParsing="false" onAction="#btnActAuth" text="Autentificare" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="185.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnClose" layoutX="249.0" layoutY="180.0" mnemonicParsing="false" onAction="#btnActClose" text="Ieșire" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icon_turn_off.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <CheckBox fx:id="chkKeepLogedIn" layoutX="75.0" layoutY="141.0" mnemonicParsing="false" text="Păstrează-mă autentificat(ă) și pornește conectat data viitoare" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="145.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </CheckBox>
+      <Button fx:id="btnRememberPassword" layoutX="220.0" layoutY="185.0" mnemonicParsing="false" onAction="#btnActRememberPassword" text="Parolă uitată?">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

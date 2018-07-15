@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="501.0" prefWidth="1011.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.stefanhalus.java.views.BusController">
+    <children>
+        <ImageView fitHeight="40.0" fitWidth="60.0" layoutX="7.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" styleClass="welcomeIcon">
+            <image>
+                <Image url="@../images/icon_bus.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="70.0" layoutY="5.0" prefHeight="30.0" prefWidth="530.0" text="Autocare">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <TabPane layoutX="10.0" layoutY="60.0" prefHeight="289.0" prefWidth="560.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="60.0">
+            <tabs>
+                <Tab text="Listă autocare">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="299.0" prefWidth="560.0">
+                            <children>
+                                <TableView fx:id="tblBus" layoutX="-1.0" layoutY="1.0" maxHeight="243.0" maxWidth="565.0" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#busShowItemDetailsEnter" onMouseClicked="#busShowItemDetailsClick" prefHeight="209.0" prefWidth="561.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                    <columns>
+                                        <TableColumn fx:id="colMark" prefWidth="148" text="Marcă" />
+                                        <TableColumn fx:id="colModel" minWidth="0.0" prefWidth="220" text="Model" />
+                                        <TableColumn fx:id="colMatriculation" minWidth="0.0" prefWidth="150" text="Înmatriculare" />
+                                        <TableColumn fx:id="colPlaces" minWidth="0.0" prefWidth="75" text="Locuri" />
+                                        <TableColumn fx:id="colComfort" minWidth="0.0" prefWidth="111" text="Confort" />
+                                    </columns>
+                                </TableView>
+                                <Button fx:id="btnAdd" layoutX="41.0" layoutY="238.0" mnemonicParsing="false" onAction="#busAdd" prefHeight="39.0" prefWidth="105.0" text="Adaugă" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                    <graphic>
+                                        <ImageView fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../images/icon_add.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Dotări">
+                    <content>
+                        <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="100.0" minWidth="100.0">
+                            <children>
+                                <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <ComboBox fx:id="cbBusFeatureCombo" prefHeight="25.0" prefWidth="410.0" promptText="Alegeți autocarul" />
+                                        <Button fx:id="btnBusFeatureSelect" mnemonicParsing="false" onAction="#busFeatureSelect" text="Selectați">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Button>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="TOP_CENTER" layoutX="-14.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+                                    <children>
+                                        <TableView fx:id="tblBusFeatureAvailable" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefHeight="467.0" prefWidth="573.0">
+                                            <columns>
+                                                <TableColumn fx:id="colBusFeatureAvailable" maxWidth="1.7976931348623157E308" minWidth="250.0" prefWidth="-1.0" text="Facilități disponibile" />
+                                            </columns>
+                                        </TableView>
+                                        <VBox alignment="TOP_CENTER" cache="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="80.0">
+                                            <children>
+                                                <Button fx:id="busFeatureAdd" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#busFeatureAdd" prefHeight="63.0" prefWidth="67.0" text="Adaugă">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                    <graphic>
+                                                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../images/icon_add.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                    </graphic>
+                                                    <VBox.margin>
+                                                        <Insets bottom="5.0" top="5.0" />
+                                                    </VBox.margin>
+                                                </Button>
+                                                <Button fx:id="busFeatureDell" alignment="CENTER" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#busFeatureDel" prefHeight="63.0" prefWidth="67.0" text="Șterge">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                    <graphic>
+                                                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../images/icon_del.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                    </graphic>
+                                                    <VBox.margin>
+                                                        <Insets bottom="5.0" top="5.0" />
+                                                    </VBox.margin>
+                                                </Button>
+                                            </children>
+                                        </VBox>
+                                        <TableView fx:id="tblBusFeatureSelected" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="467.0" prefWidth="522.0">
+                                            <columns>
+                                                <TableColumn fx:id="busFeatureSelected" maxWidth="1.7976931348623157E308" minWidth="250.0" prefWidth="-1.0" text="Facilități selectate" />
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Facilități">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView fx:id="tblFeatures" layoutX="1.0" layoutY="-17.0" onKeyReleased="#featureDetailsEnter" onMouseClicked="#featureDetailsClick" prefHeight="264.0" prefWidth="549.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                    <columns>
+                                        <TableColumn fx:id="colName" prefWidth="149.3333396911621" text="Nume" />
+                                        <TableColumn fx:id="colDescription" prefWidth="285.11114501953125" text="Descriere" />
+                                        <TableColumn fx:id="colIcon" minWidth="0.0" prefWidth="114.88882446289062" text="Imagine" />
+                                    </columns>
+                                </TableView>
+                                <Button fx:id="btnAddFeature" layoutX="-2.0" layoutY="263.0" mnemonicParsing="false" onAction="#featureAdd" text="Adaugă facilitate" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                    <graphic>
+                                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../images/icon_add.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>

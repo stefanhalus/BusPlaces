@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.stefanhalus.java.views.WelcomeController">
+   <children>
+      <TilePane alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefRows="2" prefWidth="900.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Group>
+               <children>
+                  <Rectangle arcHeight="45.0" arcWidth="5.0" fill="#0f4b17" height="80.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="121.0" text="Rezervări">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblReservations" alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="14.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="110.0" text="0">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+               <TilePane.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </TilePane.margin>
+            </Group>
+            <Group layoutX="289.0" layoutY="20.0">
+               <children>
+                  <Rectangle arcHeight="45.0" arcWidth="5.0" fill="#404b18" height="80.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="121.0" text="Clienți">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblClients" alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="14.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="110.0" text="0">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+               <TilePane.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </TilePane.margin>
+            </Group>
+            <Group layoutX="350.0" layoutY="20.0">
+               <children>
+                  <Rectangle arcHeight="45.0" arcWidth="5.0" fill="#1c4d3d" height="80.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="121.0" text="Rute">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblRoutes" alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="14.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="110.0" text="0">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+               <TilePane.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </TilePane.margin>
+            </Group>
+            <Group layoutX="411.0" layoutY="20.0">
+               <children>
+                  <Rectangle arcHeight="45.0" arcWidth="5.0" fill="#122e4b" height="80.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="121.0" text="Stații">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblStations" alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="14.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="110.0" text="0">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+               <TilePane.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </TilePane.margin>
+            </Group>
+            <Group layoutX="532.0" layoutY="20.0">
+               <children>
+                  <Rectangle arcHeight="45.0" arcWidth="5.0" fill="#540e0e" height="80.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="121.0" text="Autocare">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblBuses" alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="14.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="110.0" text="0">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+               <TilePane.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </TilePane.margin>
+            </Group>
+            <Group layoutX="365.0" layoutY="136.0">
+               <children>
+                  <Rectangle arcHeight="45.0" arcWidth="5.0" fill="#52360e" height="80.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="121.0" text="Angajați">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblEmployees" alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="14.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="110.0" text="0">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Group>
+            <Group layoutX="471.0" layoutY="20.0">
+               <children>
+                  <Rectangle arcHeight="45.0" arcWidth="5.0" fill="#4b1241" height="80.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="121.0" text="Șoferi">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDrivers" alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="14.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="110.0" text="0">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+               <TilePane.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </TilePane.margin>
+            </Group>
+         </children>
+      </TilePane>
+      <HBox alignment="CENTER" layoutX="196.0" layoutY="200.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="50.0" minWidth="50.0" prefHeight="160.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <children>
+            <ListView fx:id="listUserLogedIn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="50.0" minWidth="50.0" prefHeight="111.0" prefWidth="256.0" />
+            <Button fx:id="btnLogout" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#btnActLogout" text="Deconectare">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icon_password.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+               </HBox.margin>
+            </Button>
+            <ImageView fitHeight="150.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/autocar_welcome.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
